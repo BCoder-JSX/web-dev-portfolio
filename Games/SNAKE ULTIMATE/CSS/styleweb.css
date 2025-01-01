@@ -1,0 +1,172 @@
+/* Fuentes y colores principales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #b0eac9, #7dcfb6); /* Fondo con degradado */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Títulos animados */
+h1.animated-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    animation: bounce 2s infinite; /* Animación de rebote */
+}
+
+/* Contenedor principal de la página */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas para los sidebars y el área central */
+    gap: 20px; /* Espaciado entre columnas */
+    width: 90%;
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 20px auto; /* Centrado horizontal */
+}
+
+/* Sidebar izquierda */
+.sidebar.left, .sidebar.right {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Contenido del sidebar izquierdo */
+.history-card {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.history-icon {
+    block-size: 200px
+}
+
+/* Área central del juego */
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar derecha */
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre las estadísticas */
+}
+
+.stat-item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Botones generales */
+.btn {
+    background-color: #338033; /* Verde oscuro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.btn:hover {
+    background-color: #255725;
+    transform: scale(1.05);
+}
+
+/* Pantalla de Game Over */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Siempre al frente */
+}
+
+.hidden {
+    display: none; /* Oculta la pantalla cuando no está activa */
+}
+
+/* Animaciones */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+/* Títulos verticales */
+#leftTitle, #rightTitle {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #338033;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%); /* Rota el texto para que sea vertical */
+    text-align: center;
+    letter-spacing: 10px;
+    animation: colorChange 4s infinite; /* Cambio de color */
+}
+
+/* Título izquierdo */
+#leftTitle {
+    left: 20px; /* Pegado al borde izquierdo, con 5px de distancia */
+}
+
+/* Título derecho */
+#rightTitle {
+    right: 15px; /* Pegado al borde derecho, con 5px de distancia */
+}
+
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+    0% { color: #338033; }
+    25% { color: #ff5733; }
+    50% { color: #c70039; }
+    75% { color: #900c3f; }
+    100% { color: #338033; }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        gap: 10px;
+    }
+
+    .game-area {
+        order: 1; /* El área central del juego aparece primero */
+    }
+
+    .sidebar.left, .sidebar.right {
+        order: 2; /* Los sidebars aparecen después */
+    }
+}

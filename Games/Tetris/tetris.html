@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="tetris.js" defer></script>
+    <link rel="stylesheet" href="tetris.css">
+    <title>Tetris</title>
+</head>
+
+<body>
+    <canvas id="tetris" width="300" height="600"></canvas>
+    <div class="menu">
+        <h2>Tetris</h2>
+        <div><strong>Puntuación:</strong> <span id="score">0</span></div>
+        <div><strong>Nivel:</strong> <span id="level">1</span></div>
+        <button id="pauseButton">Pausar</button>
+        <button id="restartButton">Reiniciar</button>
+    </div>
+    <div id="gameOverScreen">
+        <h2>¡GAME OVER!</h2>
+        <h4>CREADO POR <a href="https://github.com/BCoder-JSX" BCoder-JSX></a></h4>
+        <button id="gameOverRestartButton">Reiniciar</button>
+    </div>
+</body>
+
+</html>

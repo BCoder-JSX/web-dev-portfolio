@@ -1,0 +1,20 @@
+/* Estilos para el Canvas del área de juego */
+
+canvas {
+    border: 3px solid #338033; 
+    background-image: url("asets/background.png"); /* Imagen de fondo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-radius: 10px; 
+    width: 100%; 
+    height: auto; /* Mantén la proporción */
+}
+/* Contenedor del Canvas para asegurar el centrado */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Llenar el espacio disponible */
+    max-width: 500px; /* Tamaño máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 10px; /* Espaciado interno */
+}

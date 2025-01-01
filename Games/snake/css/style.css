@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #363537;
+    margin: 0;
+    height: 100vh;
+}
+canvas {
+    border: 10px solid #363537;
+    background-color: #2fbf71;
+    margin-top: 20px;
+    margin: 0;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #dad7cd;
+    background-color: #0077ff; /* Azul brillante */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+.score {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* Pantalla de Game Over */
+#gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #16be57;
+    padding: 20px;
+    text-align: center;
+    display: none; 
+    border-radius: 10px;
+}
+
+#gameOverScreen h2 {
+    margin: 0 0 15px;
+}
+
+#gameOverScreen button {
+    background-color: #ff0000; 
+}
+
+#gameOverScreen button:hover {
+    background-color: #cc0000; 
+}
+
+/* Animación pantalla Game Over */
+#gameOverScreen {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.score-window {
+    background-color: #ed7d3a;
+    padding: 5px 10px;
+    align-self: center;
+    width: 400px;
+    height: 30px;
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    margin: 0;
+}
+
+.score-window p {
+    font-size: 20px;
+    margin: 0; 
+}
+
+.game-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+/* Efectos para el título */
+.animated-title {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: colorChange 4s infinite, bounce 1.5s ease infinite;
+}
+
+/* Animación de color de cada letra */
+@keyframes colorChange {
+    0% { color: #338033; }
+    25% { color: #ff5733; }
+    50% { color: #c70039; }
+    75% { color: #900c3f; }
+    100% { color: #255725; }
+}
+
+
+
+

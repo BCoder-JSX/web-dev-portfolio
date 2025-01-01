@@ -1,0 +1,27 @@
+
+/* Estilo para la cabeza de la culebra */
+.snake-head {
+    background-color: #55a855;
+}
+
+/* Estilo para el cuerpo adicional de la culebra */
+.snake-body {
+    background-color: #338033; /* Color normal para el cuerpo */
+}
+
+/* Animación para la culebra (opcional) */
+@keyframes snakeMove {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.snake-part {
+    animation: snakeMove 0.3s ease-in-out infinite; /* Animación suave para las partes del cuerpo de la culebra */
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="creator" content="BCoder-JSX">
+    <meta name="description" content="Clasic Snake game for mobile and desktop">
+    <meta name="keywords" content="Snake Game, juego clásico, retro, navegador">
+    <script src="JS/selecte.JS"></script>
+    <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styleweb.css">
+    <link rel="stylesheet" href="CSS/canvas.css">
+    <link rel="stylesheet" href="CSS/snake.css">
+</head>
+
+<body>
+    <div id="leftTitle" class="vertical-title" aria-hidden="true">S<br>N<br>A<br>K<br>E</div>
+
+    <div id="rightTitle" class="vertical-title" aria-hidden="true">S<br>N<br>A<br>K<br>E</div>
+
+    <main class="main-container">
+        <!-- Columna izquierda -->
+        <section class="sidebar left">
+            <h2>El Juego</h2>
+            <div class="history-card">
+                <p>Proyecto de recreación del juego de la serpiente en navegador, creado para practicar y aprender
+                    habilidades en JavaScript, CSS y HTML. El objetivo es controlar la serpiente, comer comida
+                    aleatoriamente y evitar colisiones.</p>
+            </div>
+            <h3>Acerca del Creador</h3>
+            <p>Creado por <a href="https://github.com/BCoder-JSX">BCoder-JSX</a> el 31 de diciembre de 2024. Apasionado
+                de la programación web.</p>
+        </section>
+
+        <!-- Área central del juego -->
+        <section class="game-area">
+            <div class="game-container">
+                <canvas id="gameCanvas" width="500" height="500"></canvas>
+            </div>
+        </section>
+
+        <!-- Columna derecha -->
+        <section class="sidebar right">
+            <h2>Estadísticas</h2>
+            <div class="stats-card">
+                <div class="stat-item">
+                    <span>Puntaje:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Puntaje más alto:</span>
+                    <span id="highScore">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Nivel:</span>
+                    <span id="level">1</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="btn" id="pauseBtn">Pausar</button>
+                <button class="btn" id="restartBtn">Reiniciar</button>
+            </div>
+            <br>
+            <br>
+            <center><img src="img/sicon.png" alt="Snake Icon" class="history-icon"></center>
+        </section>
+    </main>
+
+    <!-- Pantalla de Game Over -->
+    <div id="gameOverScreen" class="overlay hidden">
+        <h2>Game Over</h2>
+        <p>Tu puntuación: <span id="finalScore">0</span></p>
+        <button class="btn" id="restartGameOverBtn">Reiniciar</button>
+    </div>
+
+    <footer>
+        <p> 2024 </p>
+    </footer>
+
+    <script src="JS/snake.js" defer></script>
+    <script src="JS/scriptweb.js" defer></script>
+</body>
+
+</html>
